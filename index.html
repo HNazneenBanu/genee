@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genee — Cakes & Treats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img class="logo" src="genee-logo.jpeg" alt="Genee logo">
+    <h1>Genee</h1>
+    <p class="tagline">Cakes & Treats — Freshly baked with love</p>
+
+    <div class="links">
+      <a class="btn" target="_blank" href="https://wa.me/+916363848883?text=Hi%20Genee%2C%20I%27d%20like%20to%20place%20an%20order%20%F0%9F%8E%82">💬 Order on WhatsApp</a>
+      <a class="btn outline" href="tel:+916363848883">📞 Call Now</a>
+      <a class="btn" target="_blank" href="https://www.instagram.com/geneebakes/profilecard/?igsh=Mjh4NDNoZG83aWpq">📷 Instagram</a>
+      
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="selectItem('Cake')">🎂 Cake</div>
+      <div class="menu-item" onclick="selectItem('Cupcake')">🧁 Cupcake</div>
+      <div class="menu-item" onclick="selectItem('Brownie')">🍫 Brownie</div>
+      <div class="menu-item" onclick="selectItem('Doughnut')">🍩 Doughnut</div>
+      <div class="menu-item" onclick="selectItem('Bomboloni')">🥯 Bomboloni</div>
+      <div class="menu-item" onclick="selectItem('Jar Cake')">🍯 Jar Cake</div>
+      <div class="menu-item" onclick="selectItem('Bento Cake')">🎂 Bento Cake</div>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('cakes')">Cakes</button>
+    <button onclick="filterGallery('cupcakes')">Cupcakes</button>
+    <button onclick="filterGallery('jarcakes')">Jar Cakes</button>
+    <button onclick="filterGallery('brownies')">Brownies</button>
+    <button onclick="filterGallery('bentocakes')">Bento Cakes</button>
+  </div>
+
+  <!-- Product Gallery -->
+  <main class="gallery">
+    <!-- Cakes -->
+    <figure class="card" data-category="cakes"><img src="cake1.jpeg" alt="Cake 1"><figcaption>Cake 1</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake2.jpeg" alt="Cake 2"><figcaption>Cake 2</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake3.jpeg" alt="Cake 3"><figcaption>Cake 3</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake4.jpeg" alt="Cake 4"><figcaption>Cake 4</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake5.jpeg" alt="Cake 5"><figcaption>Cake 5</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake6.jpeg" alt="Cake 6"><figcaption>Cake 6</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake7.jpeg" alt="Cake 7"><figcaption>Cake 7</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake8.jpeg" alt="Cake 8"><figcaption>Cake 8</figcaption></figure>
+    <figure class="card" data-category="cakes"><img src="cake9.jpeg" alt="Cake 9"><figcaption>Cake 9</figcaption></figure>
+
+    <!-- Cupcakes -->
+    <figure class="card" data-category="cupcakes"><img src="cup-cake.jpeg" alt="Cupcake"><figcaption>Cupcake</figcaption></figure>
+
+    <!-- Brownies -->
+    <figure class="card" data-category="brownies"><img src="brownie.jpeg" alt="Brownie"><figcaption>Brownie</figcaption></figure>
+
+    <!-- Jar Cakes -->
+    <figure class="card" data-category="jarcakes"><img src="jar-cake.jpeg" alt="Jar Cake"><figcaption>Jar Cake</figcaption></figure>
+
+    <!-- Bento Cakes -->
+    <figure class="card" data-category="bentocakes"><img src="Bento-cake1.jpeg" alt="Bento Cake 1"><figcaption>Bento Cake 1</figcaption></figure>
+    <figure class="card" data-category="bentocakes"><img src="Bento-cake2.jpeg" alt="Bento Cake 2"><figcaption>Bento Cake 2</figcaption></figure>
+    <figure class="card" data-category="bentocakes"><img src="Bento-cake3.jpeg" alt="Bento Cake 3"><figcaption>Bento Cake 3</figcaption></figure>
+    <figure class="card" data-category="bentocakes"><img src="Bento-cake4.jpeg" alt="Bento Cake 4"><figcaption>Bento Cake 4</figcaption></figure>
+    <figure class="card" data-category="bentocakes"><img src="Bento-cake5.jpeg" alt="Bento Cake 5"><figcaption>Bento Cake 5</figcaption></figure>
+  </main>
+
+  <!-- Order Form -->
+  <section class="order" id="order">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="item" placeholder="Item (Cake, Brownie...)" required>
+      <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+      <textarea id="message" placeholder="Any special instructions..."></textarea>
+      <button type="submit">Send Order on WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Genee — All rights reserved.</p>
+    <p class="credit">Made with ❤️ by Nazneen Banu</p>
+  </footer>
+<!-- Lightbox (hidden by default) -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
+  <script>
+    // Current Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // WhatsApp Order Form
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let name = document.getElementById("name").value;
+      let item = document.getElementById("item").value;
+      let quantity = document.getElementById("quantity").value;
+      let message = document.getElementById("message").value;
+
+      let phone = "+916363848883";
+      let url = `https://wa.me/${phone}?text=Hello%20Genee!%0AName:%20${encodeURIComponent(name)}%0AItem:%20${encodeURIComponent(item)}%0AQuantity:%20${encodeURIComponent(quantity)}%0AMessage:%20${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    });
+
+    // Auto-fill item when clicked from menu
+    function selectItem(itemName) {
+      document.getElementById("item").value = itemName;
+      document.getElementById("quantity").focus();
+    }
+
+    // Filter Gallery
+    function filterGallery(category) {
+  let items = document.querySelectorAll(".gallery .card");
+  items.forEach(item => {
+    if (category === 'all') {
+      item.classList.add("show");
+      item.classList.remove("hide");
+    } else if (item.dataset.category === category) {
+      item.classList.add("show");
+      item.classList.remove("hide");
+    } else {
+      item.classList.remove("show");
+      item.classList.add("hide");
+    }
+  });
+}
+    
+window.onload = () => {
+  filterGallery('none');
+};
+// Lightbox Functionality
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+
+document.querySelectorAll(".gallery .card img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Close when clicking outside the image
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
+
+  </script>
+</body>
+</html>
